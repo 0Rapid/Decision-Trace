@@ -1,6 +1,9 @@
 # Decision Trace — Explained Yourself Later 🧠
 
-**Decision Trace** is a premium, privacy-first browser extension designed to capture the "Why" behind your online decisions. It creates a mindful pause during impulsive actions, building a searchable history of your intent.
+Decision Trace is a simple, privacy-first browser extension that captures the reason you made a decision online.
+Instead of just recording events, it helps you document your intent — so your future self understands past you.
+
+It runs entirely locally: nothing leaves your machine. There are no analytics, no servers, and no cloud sync unless added by you.
 
 ![Decision Trace Preview](https://github.com/0Rapid/Decision-Trace/raw/main/icons/icon-128.png)
 
