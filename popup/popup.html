@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decision Trace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="popup-container">
+    <div class="gradient-bg"></div>
+
+    <div class="content-card">
+      <header class="popup-header">
+        <div class="icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"
+              fill="currentColor" opacity="0.2" />
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none" />
+            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h1>Explain this decision</h1>
+        <p class="subtitle">Take a moment to document your thinking</p>
+        <div id="actionBadge" class="action-badge" style="display: none;"></div>
+      </header>
+
+      <form id="decisionForm" class="decision-form">
+        <div class="input-wrapper">
+          <textarea id="reasonInput" placeholder="Why are you doing this?" rows="4" required autofocus></textarea>
+          <label for="reasonInput" class="floating-label">Your reasoning</label>
+        </div>
+
+        <div class="mood-section">
+          <label class="section-label">How are you feeling?</label>
+          <div class="mood-grid">
+            <button type="button" class="mood-card" data-mood="Calm">
+              <span class="mood-icon">😌</span>
+              <span class="mood-name">Calm</span>
+            </button>
+            <button type="button" class="mood-card" data-mood="Rushed">
+              <span class="mood-icon">⚡</span>
+              <span class="mood-name">Rushed</span>
+            </button>
+            <button type="button" class="mood-card" data-mood="Excited">
+              <span class="mood-icon">✨</span>
+              <span class="mood-name">Excited</span>
+            </button>
+            <button type="button" class="mood-card" data-mood="Anxious">
+              <span class="mood-icon">😰</span>
+              <span class="mood-name">Anxious</span>
+            </button>
+            <button type="button" class="mood-card" data-mood="Unsure">
+              <span class="mood-icon">🤔</span>
+              <span class="mood-name">Unsure</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <button type="button" id="skipBtn" class="btn btn-ghost">
+            Skip
+          </button>
+          <button type="submit" id="saveBtn" class="btn btn-primary">
+            <span class="btn-text">Save Decision</span>
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 3V13M13 8L8 13L3 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </form>
+
+      <footer class="popup-footer">
+        <a href="../timeline/timeline.html" target="_blank" class="footer-link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.5" />
+            <path d="M2 6H14M6 2V6" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+          <span>View Timeline</span>
+        </a>
+      </footer>
+    </div>
+  </div>
+
+  <script src="../utils/storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+
+</html>

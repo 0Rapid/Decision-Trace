@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline — Decision Trace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="timeline.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="glass-header-bg"></div>
+
+        <div class="content-wrapper">
+            <header class="main-header">
+                <div class="header-content">
+                    <div class="brand">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2.5" opacity="0.2" />
+                            <path d="M16 8V16L20 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="16" cy="16" r="14" stroke="url(#paint0_linear)" stroke-width="2.5" />
+                            <defs>
+                                <linearGradient id="paint0_linear" x1="2" y1="2" x2="30" y2="30"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#4285F4" />
+                                    <stop offset="1" stop-color="#9166E0" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <h1>Decision Trace</h1>
+                    </div>
+                    <p class="header-subtitle">Your documented decision memory</p>
+                </div>
+
+                <div class="header-actions">
+                    <button id="exportBtn" class="premium-btn secondary">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path d="M14 11V14C14 14.5523 13.5523 15 13 15H5C4.44772 15 4 14.5523 4 14V11"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M9 3V11M9 11L12 8M9 11L6 8" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Export Data</span>
+                    </button>
+                    <a href="../settings/settings.html" class="premium-btn primary">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <path
+                                d="M9 12C10.6569 12 12 10.6569 12 9C12 7.34315 10.6569 6 9 6C7.34315 6 6 7.34315 6 9C6 10.6569 7.34315 12 9 12Z"
+                                stroke="currentColor" stroke-width="1.5" />
+                            <path d="M14.5 9.5C14.5 9.5 14.5 9.5 14.5 9.5C14.5 9.1 14.2 8.8 13.8 8.8H12.8"
+                                stroke="currentColor" stroke-width="1.5" />
+                            <path
+                                d="M9 2V4M9 14V16M2 9H4M14 9H16M4.05005 4.05005L5.46426 5.46426M12.5358 12.5358L13.95 13.95M4.05005 13.95L5.46426 12.5358M12.5358 5.46426L13.95 4.05005"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                        <span>Settings</span>
+                    </a>
+                </div>
+            </header>
+
+            <div class="stats-overview">
+                <div class="stat-premium-card">
+                    <div class="stat-icon-bg blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="totalCount">0</h3>
+                        <p>Total Trace</p>
+                    </div>
+                </div>
+
+                <div class="stat-premium-card">
+                    <div class="stat-icon-bg purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="thisWeekCount">0</h3>
+                        <p>Active This Week</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-bar">
+                <div class="search-container">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" />
+                        <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Search trace memories...">
+                </div>
+
+                <div class="mood-filter-container">
+                    <select id="moodFilter" class="premium-select">
+                        <option value="">All Moods</option>
+                        <option value="Calm">😌 Calm</option>
+                        <option value="Rushed">⚡ Rushed</option>
+                        <option value="Excited">✨ Excited</option>
+                        <option value="Anxious">😰 Anxious</option>
+                        <option value="Unsure">🤔 Unsure</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="timeline" class="premium-timeline">
+                <!-- Trace cards will be injected here -->
+            </div>
+
+            <div id="emptyState" class="premium-empty-state" style="display: none;">
+                <div class="empty-illustration">
+                    <div class="pulse-circle"></div>
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"
+                            fill="currentColor" opacity="0.2" />
+                    </svg>
+                </div>
+                <h2>No Trace Found</h2>
+                <p>Document your first decision with <span class="kbd">Ctrl+Shift+D</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../utils/storage.js"></script>
+    <script src="timeline.js"></script>
+</body>
+
+</html>

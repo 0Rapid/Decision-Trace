@@ -1,0 +1,12 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Sensitive configuration
+client_secret_*.json
+*.pem
+
+# Chrome Extension build files (if any)
+*.zip
+*.crx

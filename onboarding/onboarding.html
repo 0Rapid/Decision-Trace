@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup — Decision Trace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="onboarding.css">
+</head>
+
+<body>
+    <div class="onboarding-wrapper">
+        <div class="background-blobs">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+        </div>
+
+        <main class="wizard-container">
+            <!-- Step 1: Welcome -->
+            <section class="wizard-step active" id="step1">
+                <div class="step-header">
+                    <div class="icon-circle">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" />
+                            <path d="M2 17L12 22L22 17" />
+                            <path d="M2 12L12 17L22 12" />
+                        </svg>
+                    </div>
+                    <h1>Welcome to Decision Trace</h1>
+                    <p>The premium, privacy-first decision memory for your browser.</p>
+                </div>
+                <div class="step-content">
+                    <p class="intro-text">Decision Trace lives by a simple rule: <strong>Your mind is private.</strong>
+                        We help you remember your journey without tracking your behavior.</p>
+                </div>
+                <div class="step-footer">
+                    <button class="btn btn-primary" id="btnNext1">Get Started</button>
+                </div>
+            </section>
+
+            <!-- Step 2: Detection Sections -->
+            <section class="wizard-step" id="step2">
+                <div class="step-header">
+                    <h2>Smart Detection (Opt-In)</h2>
+                    <p>Detects UI moments, not behavior.</p>
+                    <div class="privacy-disclaimer">
+                        <span class="shield-icon">🛡️</span>
+                        <span><strong>Nothing is saved</strong> unless you write and click Save.</span>
+                    </div>
+                </div>
+                <div class="step-content categories-list">
+                    <div class="category-item">
+                        <div class="category-info">
+                            <span class="emoji">🛒</span>
+                            <div>
+                                <h3>Shopping & Purchases</h3>
+                                <p>Detects "Buy", "Add to Cart", and Checkout buttons.</p>
+                            </div>
+                        </div>
+                        <label class="premium-switch">
+                            <input type="checkbox" id="detectPurchase" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="category-item">
+                        <div class="category-info">
+                            <span class="emoji">✨</span>
+                            <div>
+                                <h3>Accounts & Signs ups</h3>
+                                <p>Detects "Create Account", "Join", and "Register".</p>
+                            </div>
+                        </div>
+                        <label class="premium-switch">
+                            <input type="checkbox" id="detectSignup" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="category-item">
+                        <div class="category-info">
+                            <span class="emoji">⬇️</span>
+                            <div>
+                                <h3>Downloads & Installs</h3>
+                                <p>Detects "Download", "Install", and "Get".</p>
+                            </div>
+                        </div>
+                        <label class="premium-switch">
+                            <input type="checkbox" id="detectDownload" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="category-item">
+                        <div class="category-info">
+                            <span class="emoji">🛡️</span>
+                            <div>
+                                <h3>High-Level Actions</h3>
+                                <p>Detects "Confirm", "Subscribe", and "Submit".</p>
+                            </div>
+                        </div>
+                        <label class="premium-switch">
+                            <input type="checkbox" id="detectImportant" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="step-footer">
+                    <button class="btn btn-ghost" id="btnBack2">Back</button>
+                    <button class="btn btn-primary" id="btnNext2">Save & Continue</button>
+                </div>
+            </section>
+
+            <!-- Step 3: All Set -->
+            <section class="wizard-step" id="step3">
+                <div class="step-header">
+                    <div class="success-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#34A853" stroke-width="2.5"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <h1>You're all set!</h1>
+                    <p>Decision Trace is now ready to help you remember the 'Why'.</p>
+                </div>
+                <div class="step-content">
+                    <div class="tip-card">
+                        <span class="tip-icon">💡</span>
+                        <p>You can always trigger a manual prompt using <span class="kbd">Ctrl+Shift+D</span> on any
+                            page.</p>
+                    </div>
+                </div>
+                <div class="step-footer">
+                    <button class="btn btn-primary full-width" id="finishBtn">Finish Setup</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="onboarding.js"></script>
+</body>
+
+</html>
